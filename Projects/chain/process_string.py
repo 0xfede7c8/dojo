@@ -16,8 +16,9 @@ class StringValidator:
         if self.next is not None:
             self.next.process(validated_str)
 
+    @abstractmethod
     def validate(self, string):
-        raise NotImplementedError("You should implement this method.")
+        pass
 
 
 class LowerValidator(StringValidator):
